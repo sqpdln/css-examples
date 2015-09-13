@@ -1,0 +1,19 @@
+{
+  "name": "css-course",
+  "version": "0.0.0",
+  "authors": [
+    "Lars G <lars.gribbe@cygni.se>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "inuit-buttons": "~0.4.2",
+    "inuit-starter-kit": "~0.2.9"
+  }
+}
