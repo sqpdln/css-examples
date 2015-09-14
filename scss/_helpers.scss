@@ -1,4 +1,4 @@
-// boostrap helpers:
+// helpers:
 
 // Classes
 .show {
@@ -13,47 +13,32 @@
 
 
 
-/*------------------------------------*\
-    $HELPER
-\*------------------------------------*/
-/**
- * A series of helper classes to use arbitrarily. Only use a helper class if an
- * element/component doesn’t already have a class to which you could apply this
- * styling, e.g. if you need to float `.main-nav` left then add `float:left;` to
- * that ruleset as opposed to adding the `.float--left` class to the markup.
- *
- * A lot of these classes carry `!important` as you will always want them to win
- * out over other selectors.
- */
+ // Add/remove floats
 
-
-/**
- * Add/remove floats
- */
 .float--right   { float:right!important; }
 .float--left    { float:left !important; }
 .float--none    { float:none !important; }
 
 
-/**
- * Text alignment
- */
+
+ // Text alignment
+
 .text--left     { text-align:left  !important; }
 .text--center   { text-align:center!important; }
 .text--right    { text-align:right !important; }
 
 
-/**
- * Font weights
- */
+
+ // Font weights
+
 .weight--light      { font-weight:300!important; }
 .weight--normal     { font-weight:400!important; }
 .weight--semibold   { font-weight:600!important; }
 
 
-/**
- * Add/remove margins
- */
+
+ // Add/remove margins
+
 .push           { margin:       $inuit-base-spacing-unit!important; }
 .push--top      { margin-top:   $inuit-base-spacing-unit!important; }
 .push--right    { margin-right: $inuit-base-spacing-unit!important; }
@@ -79,9 +64,9 @@
 .flush--sides   { margin-right: 0!important; margin-left:  0!important; }
 
 
-/**
- * Add/remove paddings
- */
+
+ // Add/remove paddings
+
 .soft           { padding:       $inuit-base-spacing-unit!important; }
 .soft--top      { padding-top:   $inuit-base-spacing-unit!important; }
 .soft--right    { padding-right: $inuit-base-spacing-unit!important; }
@@ -107,35 +92,31 @@
 .hard--sides    { padding-right: 0!important; padding-left:  0!important; }
 
 
-/**
- * Add a help cursor to any element that gives the user extra information on
- * `:hover`.
- */
+
+ // Add a help cursor to any element that gives the user extraformation on `:hover`.
 .informative{
     cursor:help!important;
 }
 
 
-/**
- * Mute an object by reducing its opacity.
- */
+
+ // Mute an object by reducing its opacity.
+
 .muted{
     opacity:0.5!important;
     filter:alpha(opacity = 50)!important;
 }
 
-/**
- * Apply capital case to an element (usually a `strong`).
- */
+
+ // Apply capital case to an element (usually a `strong`).
+
 .caps{
     text-transform:uppercase!important;
 }
 
 
-/**
- * Hide content off-screen without resorting to `display:none;`, also provide
- * breakpoint specific hidden elements.
- */
+
+ // Hide content off-screen without resorting toisplay:none;`, also provide breakpoint specific hidden elements.
 @mixin accessibility{
     border:0!important;
     clip:rect(0 0 0 0)!important;

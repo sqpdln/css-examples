@@ -11,21 +11,23 @@
     "livereload": "^0.3.7",
     "node-sass": "^3.3.2",
     "npm-run-all": "^1.2.11",
-    "postcss-cli": "^2.1.0"
+    "postcss-cli": "^2.1.0",
+    "uncss": "^0.12.1"
   },
   "devDependencies": {
     "nodemon": "^1.5.0",
     "parker": "^0.0.9"
   },
   "scripts": {
-    "postinstall": "bower install",
+    "postinstall": "bower install && npm run build",
     "check:parker": "parker css/main.css --format=json",
-    "build:sass": "node-sass main.scss css/main.css",
-    "build:autoprefix": "postcss --use autoprefixer css/main.css",
-    "build": "npm run build:sass && npm run autoprefix",
-    "postbuild": "npm run parker",
+    "check:uncss": "uncss ./index.html > css/main_uncss.css",
+    "build:sass": "node-sass --output-style compact main.scss css/main.css",
+    "build:autoprefix": "postcss --use autoprefixer -o css/main.css css/main.css",
+    "build": "npm run build:sass && npm run build:autoprefix",
+    "postbuild": "npm run check:parker",
     "server": "http-server . -p 10000",
-    "watch": "nodemon -e scss -x \"npm run build:sass\"",
+    "watch": "nodemon -e scss -x \"npm run build\"",
     "livereload": "livereload . -i 200",
     "dev": "npm-run-all --parallel server watch livereload"
   }

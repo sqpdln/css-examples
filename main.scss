@@ -13,12 +13,12 @@
 @import "scss/helpers";
 
 .block {
-    color: red;
+    color:green;
     &__element {
-        color: green;
+    color:red;
     }
     &--modifier {
-        color: yellow;
+    color:blue;
     }
 }
 
