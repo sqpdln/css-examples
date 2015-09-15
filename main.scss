@@ -18,9 +18,12 @@
 // }
 
 .container {
-  width: 400px;
+  width: 1200px;
   margin: 0 auto 400px;
   font-size: 20px;
+}
+.container--narrow {
+  width: 400px;
 }
 
 .brand {
