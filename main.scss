@@ -10,15 +10,31 @@
 
 // @import "bower_components/inuit-buttons/objects.buttons";
 
-@import "scss/helpers";
+// @import "scss/helpers";
 
 .block {
-    color:green;
-    &__element {
+  color:green;
+
+  &__element {
     color:red;
-    }
+
     &--modifier {
-    color:blue;
+      color:blue;
     }
+  }
 }
 
+// .autoprefixes {
+//   flex-direction: row;
+// }
+
+.container {
+  width: 400px;
+  margin: 0 auto 400px;
+  font-size: 20px;
+}
+
+.brand {
+  color:red;
+  text-transform: uppercase;
+}

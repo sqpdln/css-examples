@@ -14,6 +14,7 @@
   ],
   "dependencies": {
     "inuit-buttons": "~0.4.2",
+    "inuit-media": "~0.4.2",
     "inuit-starter-kit": "~0.2.9"
   }
 }

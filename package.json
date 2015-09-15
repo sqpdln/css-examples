@@ -22,7 +22,7 @@
     "postinstall": "bower install && npm run build",
     "check:parker": "parker css/main.css --format=json",
     "check:uncss": "uncss ./index.html > css/main_uncss.css",
-    "build:sass": "node-sass --output-style compact main.scss css/main.css",
+    "build:sass": "node-sass --output-style indent main.scss css/main.css",
     "build:autoprefix": "postcss --use autoprefixer -o css/main.css css/main.css",
     "build": "npm run build:sass && npm run build:autoprefix",
     "postbuild": "npm run check:parker",
