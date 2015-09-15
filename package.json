@@ -24,11 +24,11 @@
     "check:uncss": "uncss ./index.html > css/main_uncss.css",
     "build:sass": "node-sass --output-style indent main.scss css/main.css",
     "build:autoprefix": "postcss --use autoprefixer -o css/main.css css/main.css",
-    "build": "npm run build:sass && npm run build:autoprefix",
+    "build": "npm-run-all build:*",
     "postbuild": "npm run check:parker",
-    "server": "http-server . -p 10000",
-    "watch": "nodemon -e scss -x \"npm run build\"",
-    "livereload": "livereload . -i 200",
-    "dev": "npm-run-all --parallel server watch livereload"
+    "dev:server": "http-server . -p 10000",
+    "dev:watch": "nodemon -e scss -x \"npm run build\"",
+    "dev:livereload": "livereload . -i 200",
+    "dev": "npm-run-all --parallel dev:*"
   }
 }
